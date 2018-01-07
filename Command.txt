@@ -22,10 +22,10 @@ git stash (you have files that is staged but not committed and you need to switc
 git stash apply (get the stash files back)
 
 
-git remote (check the REMOTEBRANCHNAME, basically it shows origin)
-git remote -v (show the URL)
+git remote (檢查 REMOTEBRANCHNAME 基本上會顯示 origin)
+git remote -v (顯示 URL)
 
-git clone HTTPSADDRESS (pull down the entire repository from Github)
+git clone HTTPSADDRESS (將整個 Github 的 repository 複製下來)
 
 git fetch REMOTEBRANCHNAME (pull the data from remote, any changes have been made since last fetch or clond will be added into repository but will not be merged)
 
@@ -35,14 +35,10 @@ git push REMOTEBRANCHNAME LOCALBRANCHNAME (push data to remote branch and commit
 
 git remote add REMOTEBRANCHNAME HTTPADDRESS (add a new remote repository by providing address)
 
+git branch -d BRANCHNNAME (刪除分支)
+
+git rm -cached (將還沒被 commit 過的檔案從 staged 狀態改成 untracked。注意！！！若是已經 commit 的檔案會被整個從 repository 刪除，不能用這個指令！)
 
 
-
-
-
-
-
-
-
-
+git reset HEAD (將已經在 repository 的檔案從 staged 狀態改成 untracked)
 

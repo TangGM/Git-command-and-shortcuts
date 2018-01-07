@@ -18,6 +18,7 @@ gcd = git checkout develop
 gd = git diff
 
 gf = git fetch
+gfo = git fetch origin
 
 gl = git pull
 
@@ -35,5 +36,6 @@ grh = git reset HEAD
 grhh = gir reset HEAD --hard
 
 gst = git status
+gss = git status -s
 
 gts = git tag -s
