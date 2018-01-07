@@ -12,8 +12,17 @@ git add .html (add 所以此類型檔案)
 # 建立 .gitignore 檔案，裡面寫 "*.log" 這樣所有的 .log 就不會在 git add . 時被追蹤
 
 git branch BRANCHNAME (建立分支)
+git branch -d BRANCHNNAME (刪除分支)
 
 git checkout BRANCHNAME (移轉到分支，預設名稱是 master)
+git checkout FILENAME (回溯檔案到最新一次的 commit)
+git checkout TAGNAME (移轉到 tag 名稱的 commit，可用 git checkout master 移轉回來)
+
+git tag (查詢標籤)
+git tag -n (查詢詳細標籤)
+git tag TAGNAME (新增標籤)
+git tag -am TAGNAME (新增標示標籤)
+git tag -d TAGNAME (刪除標籤)
 
 git merge BRANCHNAME (before merging the branch, use "git status" to make sure now is in the destination branch and BRANCHNAME is the name of source branch)
 
@@ -35,10 +44,7 @@ git push REMOTEBRANCHNAME LOCALBRANCHNAME (push data to remote branch and commit
 
 git remote add REMOTEBRANCHNAME HTTPADDRESS (add a new remote repository by providing address)
 
-git branch -d BRANCHNNAME (刪除分支)
-
 git rm -cached (將還沒被 commit 過的檔案從 staged 狀態改成 untracked。注意！！！若是已經 commit 的檔案會被整個從 repository 刪除，不能用這個指令！)
-
 
 git reset HEAD (將已經在 repository 的檔案從 staged 狀態改成 untracked)
 

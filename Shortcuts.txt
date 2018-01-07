@@ -22,6 +22,14 @@ gfo = git fetch origin
 
 gl = git pull
 
+glg = git log --stat --color
+glgg = git log --graph --color
+glgga = git log --decorate --all
+glo = git log --oneline --decorate --color
+glog = git log --oneline --color --graph
+glol = git log --graph --pretty = format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+glola = git log --graph --pretty = format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+
 gm = git merge
 
 gp = git push
@@ -38,4 +46,9 @@ grhh = gir reset HEAD --hard
 gst = git status
 gss = git status -s
 
-gts = git tag -s
+gsta = git stash save
+gstaa = git stash apply
+gstd = git stash drop
+gstl = git stash list
+gstp = git stash pop
+gstc = git stash clear
