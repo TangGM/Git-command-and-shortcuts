@@ -9,6 +9,7 @@ gb = git branch
 
 gc = git commit -v
 gcmsg = git commit -m
+gcam = git commit -a -m
 
 gco = git checkout
 gcm = git checkout master

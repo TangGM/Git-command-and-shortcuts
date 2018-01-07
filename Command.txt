@@ -1,19 +1,19 @@
-git init (initialize .git repository)
+git init (初始化 .git 資料夾)
 
-git status (check the status)
+git status (檢查狀態)
 
-git add FILENAME (allow git to track the file)
+git add FILENAME (讓 git 追蹤檔案)
 
-git commit FILENAME -m 'commit message' (save the change)
-git commit -a -m 'commit message (skip the stagin step. any changes to tiles that are currently tracked will be automatically staged. BUT new files that are not tracked won't be staged and they'll have to be added manually using "git add")
+git commit FILENAME -m 'commit message' (提交改變)
+git commit -a -m 'commit message (已經被追蹤的檔案跳過 staging 階段，直接提交，還未被追蹤的還是要先 git add)
 
 
-git add .html (add all this kind of files)
-# Create .gitignore file and add "*.log" so that .log file will not not be added when using git add.
+git add .html (add 所以此類型檔案)
+# 建立 .gitignore 檔案，裡面寫 "*.log" 這樣所有的 .log 就不會在 git add . 時被追蹤
 
-git branch BRANCHNAME (create a new branch)
+git branch BRANCHNAME (建立分支)
 
-git checkout BRANCHNAME (switch branch, default name is master)
+git checkout BRANCHNAME (移轉到分支，預設名稱是 master)
 
 git merge BRANCHNAME (before merging the branch, use "git status" to make sure now is in the destination branch and BRANCHNAME is the name of source branch)
 
