@@ -1,0 +1,38 @@
+Git shorcuts for zsh
+
+g = git
+
+ga = git add
+gaa = git add --all
+
+gb = git branch
+
+gc = git commit -v
+gcmsg = git commit -m
+
+gco = git checkout
+gcm = git checkout master
+gcd = git checkout develop
+
+gd = git diff
+
+gf = git fetch
+
+gl = git pull
+
+gm = git merge
+
+gp = git push
+
+gr = git remote
+gra = git remote add
+grup = git remote update
+
+grb = git rebase
+
+grh = git reset HEAD
+grhh = gir reset HEAD --hard
+
+gst = git status
+
+gts = git tag -s

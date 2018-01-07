@@ -1,0 +1,48 @@
+git init (initialize .git repository)
+
+git status (check the status)
+
+git add FILENAME (allow git to track the file)
+
+git commit FILENAME -m 'commit message' (save the change)
+git commit -a -m 'commit message (skip the stagin step. any changes to tiles that are currently tracked will be automatically staged. BUT new files that are not tracked won't be staged and they'll have to be added manually using "git add")
+
+
+git add .html (add all this kind of files)
+# Create .gitignore file and add "*.log" so that .log file will not not be added when using git add.
+
+git branch BRANCHNAME (create a new branch)
+
+git checkout BRANCHNAME (switch branch, default name is master)
+
+git merge BRANCHNAME (before merging the branch, use "git status" to make sure now is in the destination branch and BRANCHNAME is the name of source branch)
+
+git stash (you have files that is staged but not committed and you need to switch the branch. in order not to mess up with the file between branches because files that not be committed will still show up in other branches even though it is created in current branch. so you can save this kind of files in stash)
+
+git stash apply (get the stash files back)
+
+
+git remote (check the REMOTEBRANCHNAME, basically it shows origin)
+git remote -v (show the URL)
+
+git clone HTTPSADDRESS (pull down the entire repository from Github)
+
+git fetch REMOTEBRANCHNAME (pull the data from remote, any changes have been made since last fetch or clond will be added into repository but will not be merged)
+
+git pull REMOTEBRANCHNAME (like fetch command but will merge files into current branch)
+
+git push REMOTEBRANCHNAME LOCALBRANCHNAME (push data to remote branch and commit to local branch)
+
+git remote add REMOTEBRANCHNAME HTTPADDRESS (add a new remote repository by providing address)
+
+
+
+
+
+
+
+
+
+
+
+
