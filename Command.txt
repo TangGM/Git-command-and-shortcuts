@@ -1,14 +1,23 @@
+git version (查詢版本)
+
+git config --list (查詢設定列表)
+git config --global user.name 'YOURNAME' (設定名字)
+git config --global user.email 'EMAILADDRESS' (設定信箱)
+
 git init (初始化 .git 資料夾)
 
 git status (檢查狀態)
 
-git add FILENAME (讓 git 追蹤檔案)
+git log (顯示紀錄)
 
-git commit FILENAME -m 'commit message' (提交改變)
-git commit -a -m 'commit message (已經被追蹤的檔案跳過 staging 階段，直接提交，還未被追蹤的還是要先 git add)
+git add FILENAME (將檔案加入索引)
+git add . (將全部檔案加入索引)
 
+git commmit FILENAME (提交)
+git commit FILENAME -m 'COMMIT MESSAGE' (直接用一行註解提交)
+git commit -a -m 'COMMIT MESSAGE' (已經被追蹤的檔案跳過 staging 階段，直接提交，還未被追蹤的還是要先 git add)
 
-git add .html (add 所以此類型檔案)
+git add .FORMAT (add 所有此類型檔案)
 # 建立 .gitignore 檔案，裡面寫 "*.log" 這樣所有的 .log 就不會在 git add . 時被追蹤
 
 git branch BRANCHNAME (建立分支)
@@ -16,35 +25,36 @@ git branch -d BRANCHNNAME (刪除分支)
 
 git checkout BRANCHNAME (移轉到分支，預設名稱是 master)
 git checkout FILENAME (回溯檔案到最新一次的 commit)
-git checkout TAGNAME (移轉到 tag 名稱的 commit，可用 git checkout master 移轉回來)
+git checkout TAGNAME (移轉到帶有 tag 名稱的 commit，可用 git checkout master 移轉回來)
 
-git tag (查詢標籤)
-git tag -n (查詢詳細標籤)
+git reset HEAD (從 staged 狀態改成 untracked)
+git reset HEAD --hard (回到最近一次 commit 的狀態)
+git reset HEAD^ --hard (回到第二近的 commit 狀態)
+git rm -cached (已經提交的檔案會被整個從 repository 刪除，不要亂用這個指令！)
+
+git tag (查詢現有標籤)
+git tag -n (查詢現有詳細標籤)
 git tag TAGNAME (新增標籤)
 git tag -am TAGNAME (新增標示標籤)
 git tag -d TAGNAME (刪除標籤)
 
-git merge BRANCHNAME (before merging the branch, use "git status" to make sure now is in the destination branch and BRANCHNAME is the name of source branch)
+git merge BRANCHNAME (合併分支前，用 git status 確保現在是在對的目標分支，這邊的 BRANCHNAME 是來源分支)
 
-git stash (you have files that is staged but not committed and you need to switch the branch. in order not to mess up with the file between branches because files that not be committed will still show up in other branches even though it is created in current branch. so you can save this kind of files in stash)
-
+git stash (你有還沒 commit 的 staged 狀態檔案，但現在必須轉換分支，所以把這些檔案存在 stash)
+git stash list (查看暫存列表)
+git stash pop (還原暫存)
+git stash drop (清除最新暫存)
 git stash apply (get the stash files back)
 
-
-git remote (檢查 REMOTEBRANCHNAME 基本上會顯示 origin)
+git remote (檢查 REMOTEBRANCHNAME，預設是 origin)
 git remote -v (顯示 URL)
 
 git clone HTTPSADDRESS (將整個 Github 的 repository 複製下來)
 
-git fetch REMOTEBRANCHNAME (pull the data from remote, any changes have been made since last fetch or clond will be added into repository but will not be merged)
+git fetch REMOTEBRANCHNAME (把檔案從遠端抓下來，從上次 fetch 或 clone 的變更都會被加到 repository，但不會合併)
 
-git pull REMOTEBRANCHNAME (like fetch command but will merge files into current branch)
+git pull REMOTEBRANCHNAME (像是 fetch 但會合併檔案到現在的分支)
 
-git push REMOTEBRANCHNAME LOCALBRANCHNAME (push data to remote branch and commit to local branch)
+git push REMOTEBRANCHNAME LOCALBRANCHNAME (推送資料到遠端分支，並提交到本地分支)
 
-git remote add REMOTEBRANCHNAME HTTPADDRESS (add a new remote repository by providing address)
-
-git rm -cached (將還沒被 commit 過的檔案從 staged 狀態改成 untracked。注意！！！若是已經 commit 的檔案會被整個從 repository 刪除，不能用這個指令！)
-
-git reset HEAD (將已經在 repository 的檔案從 staged 狀態改成 untracked)
-
+git remote add REMOTEBRANCHNAME HTTPADDRESS (提供網址新增一個新的遠端 repository)

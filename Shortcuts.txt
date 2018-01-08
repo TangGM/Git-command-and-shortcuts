@@ -33,6 +33,7 @@ glola = git log --graph --pretty = format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 gm = git merge
 
 gp = git push
+gpsup = git push --set-upstream origin $(current_branch)
 
 gr = git remote
 gra = git remote add
